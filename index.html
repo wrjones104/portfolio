@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Jones | Marketing Ops & Data Engineering</title>
+    <title>Will Jones | Data Engineering & Automation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -21,14 +21,14 @@
     <header class="max-w-5xl mx-auto px-6 py-20">
         <div class="max-w-2xl">
             <h2 class="text-5xl font-extrabold mb-6 leading-tight">
-                Building data pipelines and <span class="text-blue-600">marketing platforms</span> that scale.
+                Building data pipelines and <span class="text-blue-600">automation tools</span> that scale.
             </h2>
             <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                Marketing Operations Leader at MedPro Group. Specialist in Data Engineering, CRM Management, and Python-driven automation.
+                Hi, I'm Will. I specialize in data engineering, platform management, and Python-driven automation. I love taking complex data problems and building elegant, functional solutions.
             </p>
             <div class="flex gap-4">
                 <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                    View Portfolio
+                    View Projects
                 </a>
                 <a href="https://github.com/wrjones104" class="bg-white border border-slate-200 text-slate-700 px-6 py-3 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition">
                     Visit GitHub
@@ -40,79 +40,90 @@
     <section class="bg-white border-y border-slate-200 py-12">
         <div class="max-w-5xl mx-auto px-6">
             <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8 text-center">Core Tech Stack</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
-                <div class="flex flex-col items-center gap-2"><i class="fab fa-python text-2xl"></i><span>Python</span></div>
-                <div class="flex flex-col items-center gap-2"><i class="fas fa-database text-2xl"></i><span>SQL & Alteryx</span></div>
-                <div class="flex flex-col items-center gap-2"><i class="fas fa-chart-line text-2xl"></i><span>Tableau</span></div>
-                <div class="flex flex-col items-center gap-2"><i class="fab fa-aws text-2xl"></i><span>AWS / Cloud</span></div>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-python text-2xl"></i><span class="text-sm font-medium">Python</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fas fa-database text-2xl"></i><span class="text-sm font-medium">SQL & Alteryx</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fas fa-chart-line text-2xl"></i><span class="text-sm font-medium">Tableau</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-google text-2xl"></i><span class="text-sm font-medium">Google Cloud</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-linux text-2xl"></i><span class="text-sm font-medium">Linux</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-android text-2xl"></i><span class="text-sm font-medium">Android</span></div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="max-w-5xl mx-auto px-6 py-24">
-        <h3 class="text-3xl font-bold mb-12">Recent GitHub Projects</h3>
+        <h3 class="text-3xl font-bold mb-12">Featured Projects</h3>
         
-        <div id="github-projects" class="grid md:grid-cols-2 gap-8">
-            <p class="text-slate-500 italic">Loading projects from GitHub...</p>
+        <div class="space-y-12">
+            <!-- Alteryx Lineage Project -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col md:flex-row">
+                <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                    <div class="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2">Python / Streamlit</div>
+                    <h4 class="text-2xl font-bold mb-4">Alteryx Lineage & Impact Analysis</h4>
+                    <p class="text-slate-600 mb-6">A web application built to parse Alteryx workflows, store their metadata, and provide powerful lineage analysis. This tool helps data teams understand dependencies, perform "blast radius" impact analysis, and trace individual fields from source to destination.</p>
+                    <div class="flex flex-wrap items-center gap-4 mt-auto">
+                        <a href="https://github.com/wrjones104/alteryx-lineage" target="_blank" class="inline-flex items-center text-slate-600 hover:text-blue-600 font-semibold transition">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-slate-100 md:w-1/3 flex items-center justify-center p-8 border-t md:border-t-0 md:border-l border-slate-200">
+                    <img src="images/alteryx-screenshot.jpg" alt="Alteryx Lineage App Screenshot" class="w-full h-auto rounded-lg shadow-md border border-slate-200">
+                </div>
+            </div>
+
+            <!-- SeedBot Project -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col md:flex-row">
+                <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                    <div class="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2">Python / Discord API</div>
+                    <h4 class="text-2xl font-bold mb-4">SeedBot</h4>
+                    <p class="text-slate-600 mb-6">A custom Discord bot designed for video game communities. SeedBot automates community interactions, tracks metrics, and provides a seamless experience for users interacting with game randomizers.</p>
+                    <div class="flex flex-wrap items-center gap-4 mt-auto">
+                        <a href="https://seedbot.net" target="_blank" class="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition">
+                            <i class="fas fa-globe mr-2"></i> seedbot.net
+                        </a>
+                        <a href="https://github.com/wrjones104/seedbot2000" target="_blank" class="inline-flex items-center text-slate-600 hover:text-blue-600 font-semibold transition">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-slate-100 md:w-1/3 flex items-center justify-center p-8 border-t md:border-t-0 md:border-l border-slate-200">
+                    <img src="images/seedbot-screenshot.png" alt="SeedBot Interface Screenshot" class="w-full h-auto rounded-lg shadow-md border border-slate-200">
+                </div>
+            </div>
+
+            <!-- AP Tracker Project -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col md:flex-row">
+                <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                    <div class="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2">Web Application</div>
+                    <h4 class="text-2xl font-bold mb-4">Archipelago Tracker</h4>
+                    <p class="text-slate-600 mb-6">A tracking tool built for the Archipelago multi-game randomizer. This application helps players monitor items, locations, and game progression across complex, randomized multi-world environments.</p>
+                    <div class="flex flex-wrap items-center gap-4 mt-auto">
+                        <a href="https://archipelagoalerts.com" target="_blank" class="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition">
+                            <i class="fas fa-globe mr-2"></i> archipelagoalerts.com
+                        </a>
+                        <a href="https://github.com/wrjones104/aptracker" target="_blank" class="inline-flex items-center text-slate-600 hover:text-blue-600 font-semibold transition">
+                            <i class="fab fa-github mr-2"></i> View Code
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.jones.aptracker" target="_blank" class="inline-block transition hover:opacity-80">
+                            <img alt="Get it on Google Play" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-10" />
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-slate-100 md:w-1/3 flex items-center justify-center p-8 border-t md:border-t-0 md:border-l border-slate-200">
+                    <img src="images/aptracker-screenshot.png" alt="Archipelago Tracker Interface Screenshot" class="w-full h-auto rounded-lg shadow-md border border-slate-200">
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-200 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>© 2026 Will Jones. Built with Python & GitHub Pages.</p>
+        <p>© 2026 Will Jones.</p>
         <div class="flex gap-6">
-            <a href="https://github.com/wrjones104" class="hover:text-blue-600">GitHub</a>
-            <a href="mailto:wrjones@gmail.com" class="hover:text-blue-600">Contact</a>
+            <a href="https://github.com/wrjones104" class="hover:text-blue-600 transition">GitHub</a>
+            <a href="mailto:wrjones@gmail.com" class="hover:text-blue-600 transition">Contact</a>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const username = 'wrjones104';
-            // Fetch the 6 most recently updated repositories
-            const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`;
-            const projectsContainer = document.getElementById('github-projects');
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    projectsContainer.innerHTML = ''; // Clear loading text
-
-                    data.forEach(repo => {
-                        // Skip the portfolio repo itself so it doesn't loop
-                        if(repo.name.toLowerCase() === 'portfolio' || repo.name.toLowerCase() === 'wrjones104.github.io') return;
-
-                        const description = repo.description ? repo.description : 'No description provided.';
-                        const language = repo.language ? repo.language : 'Code';
-                        
-                        // Check if the repo has GitHub Pages enabled to set the correct URL
-                        // If it has a homepage defined in GitHub, use that, otherwise fallback to the repo URL
-                        const linkUrl = repo.has_pages ? `https://wjones.dev/${repo.name}` : repo.html_url;
-                        const linkText = repo.has_pages ? 'View Live Site' : 'View Code';
-                        const iconClass = repo.has_pages ? 'fas fa-external-link-alt' : 'fab fa-github';
-
-                        const cardHtml = `
-                            <div class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col h-full">
-                                <div class="p-8 flex-grow">
-                                    <div class="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2">${language}</div>
-                                    <h4 class="text-2xl font-bold mb-4 capitalize">${repo.name.replace(/-/g, ' ')}</h4>
-                                    <p class="text-slate-600 mb-6">${description}</p>
-                                </div>
-                                <div class="p-8 pt-0 mt-auto">
-                                    <a href="${linkUrl}" target="_blank" class="inline-flex items-center text-blue-600 font-semibold group-hover:underline">
-                                        ${linkText} <i class="${iconClass} ml-2 text-xs"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        `;
-                        projectsContainer.insertAdjacentHTML('beforeend', cardHtml);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching GitHub repos:', error);
-                    projectsContainer.innerHTML = '<p class="text-red-500">Failed to load projects. Please check GitHub directly.</p>';
-                });
-        });
-    </script>
 
 </body>
 </html>
