@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding: For Business & Pleasure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            900: '#134e4a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-link.active {
+            color: #2dd4bf;
+            border-bottom: 2px solid #2dd4bf;
+        }
+        
+        /* Fallback styling for images if they aren't loaded */
+        img {
+            background-color: #1e293b;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-panel border-b-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-tighter text-white flex items-center gap-2">
+                    <i class="ph-fill ph-code text-brand-400 text-2xl"></i>
+                    VibeCoding
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#intro" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">Intro</a>
+                        <a href="#workflows" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">Workflows</a>
+                        <a href="#pleasure" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">Pleasure</a>
+                        <a href="#business" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">Business</a>
+                        <a href="#catch" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">The Catch</a>
+                        <a href="#qa" class="nav-link hover:text-brand-400 px-1 py-2 text-sm font-medium transition-colors">Q&A</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="ph ph-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#intro" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">Intro</a>
+                <a href="#workflows" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">Workflows</a>
+                <a href="#pleasure" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">Pleasure</a>
+                <a href="#business" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">Business</a>
+                <a href="#catch" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">The Catch</a>
+                <a href="#qa" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-brand-400 mobile-link">Q&A</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <section id="intro" class="min-h-screen flex flex-col justify-center pt-20 pb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-sm font-medium mb-6 w-max border border-brand-500/20">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Live Presentation Mode
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Vibe Coding: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-blue-500">
+                    Business & Pleasure
+                </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
+                Stop typing syntax. Start directing AI. How to build tools, apps, and automations without being a software engineer.
+            </p>
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-slate-700/50 max-w-3xl">
+                <h3 class="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                    <i class="ph-fill ph-lightbulb text-yellow-400"></i>
+                    The Mindset Shift
+                </h3>
+                <p class="text-slate-300 leading-relaxed mb-4">
+                    You don't need to know how to swing the hammer if you know exactly what the house is supposed to look like. Think of yourself as a <strong>Creative Director</strong> or a <strong>Project Manager</strong>, not a programmer.
+                </p>
+                <p class="text-slate-300 leading-relaxed italic text-sm border-l-4 border-brand-500 pl-4">
+                    "Fun fact: The website you are looking at right now was vibe coded specifically for this presentation."
+                </p>
+            </div>
+        </section>
+
+        <section id="workflows" class="min-h-screen flex flex-col justify-center py-20 border-t border-slate-800/50">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">How to Actually Do It</h2>
+            <p class="text-lg text-slate-400 mb-12">Two distinct paths for working with AI.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-purple-500 transition-transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-compass-tool text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">The Architect</h3>
+                    <p class="text-sm text-purple-400 font-semibold mb-4">Best for: Blank-canvas ideas & new projects</p>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-purple-400 mt-1 shrink-0"></i>
+                            <span><strong>Plan First:</strong> Have a conversation with Gemini before asking for any code.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-purple-400 mt-1 shrink-0"></i>
+                            <span><strong>Map it out:</strong> Discuss architecture, feasibility, and best practices.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-purple-400 mt-1 shrink-0"></i>
+                            <span><strong>Execute:</strong> Once the blueprint is nailed down, go into the trenches and build it piece by piece.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-blue-500 transition-transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ph ph-magnifying-glass text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">The Validator</h3>
+                    <p class="text-sm text-blue-400 font-semibold mb-4">Best for: Iterations & delegating features</p>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-blue-400 mt-1 shrink-0"></i>
+                            <span><strong>Delegate:</strong> Give the AI a small, highly specific task or upgrade.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-blue-400 mt-1 shrink-0"></i>
+                            <span><strong>Let it work:</strong> Allow it to write the initial logic and structure.</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="ph-fill ph-check-circle text-blue-400 mt-1 shrink-0"></i>
+                            <span><strong>Review:</strong> Your job shifts entirely to reviewing, testing, and directing tweaks.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="pleasure" class="min-h-screen flex flex-col justify-center py-20 border-t border-slate-800/50">
+            <div class="mb-12">
+                <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">For Pleasure</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-4">Building the Niche & Nerdy</h2>
+                <p class="text-lg text-slate-400 max-w-2xl">Bridging the gap between what you know and what you want to build.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Example 1: Seedbot -->
+                <div class="glass-panel p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-center">
+                    
+                    <!-- Seedbot Image Composition -->
+                    <div class="md:w-1/2 w-full relative h-72 md:h-80 flex items-center justify-center">
+                        
+                        <!-- Discord Image (Background/Left) -->
+                        <img src="2113.png" onerror="this.src='https://placehold.co/400x800/1e293b/94a3b8?text=Seedbot+Discord'" alt="Seedbot in Discord" 
+                             class="absolute left-0 top-2 w-[55%] md:w-[60%] rounded-xl border border-slate-700 shadow-lg opacity-60 scale-90 origin-left transition-all duration-300 hover:opacity-100 hover:scale-[0.92] hover:z-20 object-cover object-top h-[90%]">
+                        
+                        <!-- Arrow -->
+                        <div class="absolute z-10 bg-slate-800 border border-slate-600 rounded-full p-2 shadow-lg shadow-brand-500/10">
+                            <i class="ph-bold ph-arrow-right text-brand-400 text-2xl"></i>
+                        </div>
+                        
+                        <!-- Web Image (Foreground/Right) -->
+                        <img src="2114.png" onerror="this.src='https://placehold.co/400x800/1e293b/94a3b8?text=Seedbot+Web'" alt="Seedbot Web Interface" 
+                             class="absolute right-0 bottom-2 w-[55%] md:w-[60%] rounded-xl border border-slate-600 shadow-2xl z-10 hover:scale-105 transition-transform duration-300 object-cover object-top h-[90%]">
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-white mb-2">Seedbot</h3>
+                        <p class="text-brand-400 text-sm mb-4">From Python Script to Full Web Experience</p>
+                        <p class="text-slate-300 mb-4">
+                            <strong>The Problem:</strong> I knew Python well enough to build the Discord bot, but I didn't know a single line of HTML or JavaScript to give it a proper web interface.
+                        </p>
+                        <p class="text-slate-300">
+                            <strong>The Solution:</strong> Used AI as a translator. I explained the Python logic, and the AI generated the HTML/JS front-end to match. Vibe coding gave me capabilities I didn't actually possess.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Example 2: Archipelago -->
+                <div class="glass-panel p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-center">
+                    
+                    <!-- Archipelago App Mockup -->
+                    <div class="md:w-1/3 w-full flex justify-center order-first md:order-last">
+                        <div class="relative w-56 rounded-[2.5rem] border-[8px] border-slate-800 bg-slate-900 shadow-2xl overflow-hidden aspect-[9/19] hover:-translate-y-2 transition-transform duration-300">
+                            <!-- Notch Detail -->
+                            <div class="absolute top-0 inset-x-0 h-4 bg-slate-800 w-1/2 mx-auto rounded-b-xl z-20"></div>
+                            <img src="2115.png" onerror="this.src='https://placehold.co/400x800/1e293b/94a3b8?text=Archipelago+App'" alt="Archipelago Alerts App" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-white mb-2">Archipelago Alerts</h3>
+                        <p class="text-brand-400 text-sm mb-4">From Backend Logic to Mobile App</p>
+                        <p class="text-slate-300 mb-4">
+                            <strong>The Problem:</strong> Similar story. I had the Python backend figured out, but zero experience building native Android applications.
+                        </p>
+                        <p class="text-slate-300">
+                            <strong>The Solution:</strong> Guided the AI to build the Android frontend. You don't need to go back to school to learn a new platform; you just need to know how to ask the right questions to piece it together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="business" class="min-h-screen flex flex-col justify-center py-20 border-t border-slate-800/50">
+            <div class="mb-12">
+                <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">For Business</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-4">Solving Real-World Problems</h2>
+                <p class="text-lg text-slate-400 max-w-2xl">Bypassing the IT ticket queue to build your own solutions.</p>
+            </div>
+
+            <div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-500/10 blur-3xl pointer-events-none"></div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-brand-500/20 rounded-2xl flex items-center justify-center border border-brand-500/30">
+                            <i class="ph ph-envelope-simple-open text-3xl text-brand-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-white">The Mandrill Email API Tool</h3>
+                            <p class="text-slate-400">Custom Internal Tooling</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-10 mt-8">
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-b border-slate-700 pb-2">The Old Way</h4>
+                            <ul class="space-y-2 text-slate-400">
+                                <li class="flex items-center gap-2"><i class="ph text-red-400 ph-x"></i> Submit an IT request</li>
+                                <li class="flex items-center gap-2"><i class="ph text-red-400 ph-x"></i> Argue for budget allocation</li>
+                                <li class="flex items-center gap-2"><i class="ph text-red-400 ph-x"></i> Wait 6 months for prioritization</li>
+                                <li class="flex items-center gap-2"><i class="ph text-red-400 ph-x"></i> Get a tool that kind of does what you wanted</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-b border-slate-700 pb-2">The Vibe Coding Way</h4>
+                            <ul class="space-y-2 text-slate-300">
+                                <li class="flex items-center gap-2"><i class="ph-fill text-brand-400 ph-check-circle"></i> Identify the bottleneck</li>
+                                <li class="flex items-center gap-2"><i class="ph-fill text-brand-400 ph-check-circle"></i> Explain the ideal workflow to AI</li>
+                                <li class="flex items-center gap-2"><i class="ph-fill text-brand-400 ph-check-circle"></i> Iterate on the UI and functionality</li>
+                                <li class="flex items-center gap-2"><i class="ph-fill text-brand-400 ph-check-circle"></i> Deploy a bespoke tool in an afternoon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 bg-slate-900/50 p-6 rounded-xl border border-slate-700/50">
+                        <p class="text-center text-lg text-slate-200">
+                            <strong>Takeaway:</strong> Think about the spreadsheets you hate updating, the data you manually move from A to B, or the reports you compile by hand. <span class="text-brand-400 font-semibold">You can vibe code the automation for that.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catch" class="min-h-screen flex flex-col justify-center py-20 border-t border-slate-800/50">
+            <div class="mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-medium mb-4 border border-red-500/20">
+                    <i class="ph-fill ph-warning-circle"></i>
+                    Reality Check
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">The Catch: What AI Leaves Out</h2>
+                <p class="text-lg text-slate-400 max-w-2xl">Don't build a tool that accidentally leaks your customer database.</p>
+            </div>
+
+            <div class="glass-panel p-8 rounded-2xl border border-red-900/50 bg-red-950/10 mb-8">
+                <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                    <i class="ph-fill ph-student text-red-400"></i>
+                    The "Eager Intern" Problem
+                </h3>
+                <p class="text-slate-300">
+                    AI wants to give you working code as fast as possible. This means it will happily cut corners on security and ignore edge cases if you don't explicitly tell it not to.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                    <div class="text-red-400 mb-3"><i class="ph ph-key text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-white mb-2">Hardcoded Secrets</h4>
+                    <p class="text-sm text-slate-400">
+                        AI will often put your API keys or passwords right in plain text in the script. Always use Environment Variables (`.env` files) to keep secrets safe.
+                    </p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                    <div class="text-red-400 mb-3"><i class="ph ph-shield-warning text-3xl"></i></div>
+                    <h4 class="text-lg font-bold text-white mb-2">Security Vulnerabilities</h4>
+                    <p class="text-sm text-slate-400">
+                        It won't always account for things like SQL injections or cross-site scripting (XSS) unless you prompt it to be secure by design.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 glass-panel rounded-xl border-l-4 border-l-brand-500 flex items-start gap-4">
+                <i class="ph-fill ph-info text-2xl text-brand-400 mt-1"></i>
+                <div>
+                    <h4 class="text-white font-bold mb-1">The Director's QA Prompt</h4>
+                    <p class="text-slate-300 font-mono text-sm bg-slate-900 p-3 rounded mt-2">
+                        "Review this code for security vulnerabilities, edge cases, and best practices before we finalize."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="qa" class="min-h-screen flex flex-col justify-center py-20 border-t border-slate-800/50 text-center items-center">
+            <div class="w-24 h-24 bg-brand-500/20 rounded-full flex items-center justify-center mb-8 border border-brand-500/30">
+                <i class="ph-fill ph-chats text-5xl text-brand-400"></i>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">Questions?</h2>
+            <p class="text-xl text-slate-400 max-w-2xl mb-12">
+                You don't have to be a software engineer to build software anymore. You just need to know what you want and have the patience to direct the AI to get there.
+            </p>
+            
+            <div class="glass-panel p-8 rounded-2xl w-full max-w-2xl">
+                <h3 class="text-xl font-semibold text-white mb-4">Let's talk about:</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-sm text-slate-300 border border-slate-700">"Could I build X?"</span>
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-sm text-slate-300 border border-slate-700">Getting started with Gemini</span>
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-sm text-slate-300 border border-slate-700">Handling errors</span>
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-sm text-slate-300 border border-slate-700">Connecting APIs</span>
+                </div>
+            </div>
+            
+            <p class="mt-16 text-slate-500 text-sm">
+                github.com/wrjones104
+            </p>
+        </section>
+
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                    if(activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
